@@ -16,5 +16,13 @@ namespace OOPlearn
         //}
         public int UnitInStock { get; set; }
         public string Unit { get; set; }
+
+        public Product2()
+        {
+            Name = "ขี้";
+            Price = 7;
+            UnitInStock = 245681;
+            Unit = "ก้อน";
+        }
     }
 }

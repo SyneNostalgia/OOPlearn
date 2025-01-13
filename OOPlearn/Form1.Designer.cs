@@ -40,6 +40,11 @@
             label4 = new Label();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            listBox1 = new ListBox();
+            label5 = new Label();
             SuspendLayout();
             // 
             // textBox1
@@ -147,11 +152,64 @@
             textBox4.Size = new Size(125, 27);
             textBox4.TabIndex = 6;
             // 
+            // button5
+            // 
+            button5.Location = new Point(243, 154);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 29);
+            button5.TabIndex = 12;
+            button5.Text = "GetYear";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(243, 189);
+            button6.Name = "button6";
+            button6.Size = new Size(94, 29);
+            button6.TabIndex = 13;
+            button6.Text = "GetYear2";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(243, 224);
+            button7.Name = "button7";
+            button7.Size = new Size(94, 29);
+            button7.TabIndex = 14;
+            button7.Text = "enumDay";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(17, 256);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(147, 184);
+            listBox1.TabIndex = 15;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(17, 233);
+            label5.Name = "label5";
+            label5.Size = new Size(92, 20);
+            label5.TabIndex = 16;
+            label5.Text = "เลือกวันทำงาน";
+            label5.Click += label5_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(350, 450);
+            Controls.Add(label5);
+            Controls.Add(listBox1);
+            Controls.Add(button7);
+            Controls.Add(button6);
+            Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(label3);
@@ -166,6 +224,7 @@
             Controls.Add(textBox1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +243,10 @@
         private Label label4;
         private TextBox textBox3;
         private TextBox textBox4;
+        private Button button5;
+        private Button button6;
+        private Button button7;
+        private ListBox listBox1;
+        private Label label5;
     }
 }

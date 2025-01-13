@@ -35,10 +35,10 @@ namespace OOPlearn
         private void button3_Click(object sender, EventArgs e)
         {
             Product2 p2 = new Product2();
-            p2.Name = "คณะหมอลำซิ่ง";
-            p2.Price = 2400000;
-            p2.UnitInStock = 7;
-            p2.Unit = "คณะ";
+            //p2.Name = "คณะหมอลำซิ่ง";
+            //p2.Price = 2400000;
+            //p2.UnitInStock = 7;
+            //p2.Unit = "คณะ";/
 
             textBox1.Text = p2.Name;
             textBox2.Text = p2.Price.ToString();
@@ -52,10 +52,45 @@ namespace OOPlearn
 
         private void button4_Click(object sender, EventArgs e)
         {
-            product p1 = new product("สินค้าหมดอายุ",2000);
+            product p1 = new product("สินค้าหมดอายุ", 2000);
 
             textBox1.Text = p1.Name;
             textBox2.Text = p1.Price.ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ThaiDate tt = new ThaiDate();
+            //string msg = "ปี ค.ศ. " + tt.GetCurrentYear().ToString() + Environment.NewLine;
+            //msg += "ปี พ.ศ. " + tt.GetCurrentThaiYear().ToString();
+            //MessageBox.Show(msg);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string msg = "ปี ค.ศ. " + ThaiDate.GetCurrentYear().ToString() + Environment.NewLine;
+            msg += "ปี พ.ศ. " + ThaiDate.GetCurrentThaiYear().ToString();
+            MessageBox.Show(msg);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ThaiDate.ThaiDayName x = ThaiDate.ThaiDayName.จันทร์;
+            MessageBox.Show(x.ToString());
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Type t = typeof(ThaiDate.ThaiDayName);
+            string[] tday = Enum.GetNames(t);
+
+            listBox1.Items.AddRange(tday);
         }
     }
 }
